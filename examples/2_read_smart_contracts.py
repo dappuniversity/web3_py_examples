@@ -2,8 +2,7 @@ import json
 from web3 import Web3
 
 # Fill in your infura API key here
-# infura_url = "https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY_GOES_HERE"
-infura_url = "https://mainnet.infura.io/v3/953247d0c42b419aa3416810d625cc8c"
+infura_url = "https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY_GOES_HERE"
 web3 = Web3(Web3.HTTPProvider(infura_url))
 
 # OMG Address
