@@ -14,9 +14,11 @@ hexbytes==0.1.0
 idna==2.8
 lru-dict==1.1.6
 parsimonious==0.8.1
+py-solc==3.2.0
 pycryptodome==3.8.0
 requests==2.21.0
 rlp==1.1.0
+semantic-version==2.6.0
 six==1.12.0
 toolz==0.9.0
 urllib3==1.24.1
