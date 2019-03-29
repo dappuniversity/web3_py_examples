@@ -1,3 +1,2 @@
+import json
 from web3 import Web3
-
-# Tutorial examples go here...

@@ -12,7 +12,7 @@ web3.eth.defaultAccount = web3.eth.accounts[0]
 # Greeter contract ABI
 abi = json.loads('[{"constant":false,"inputs":[{"name":"_greeting","type":"string"}],"name":"setGreeting","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"greet","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"greeting","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]')
 # Greeter contract address - convert to checksum address
-address = web3.toChecksumAddress('0x216f2d21c272c1da49e98fa6596a6ffb0a62cdc5')
+address = web3.toChecksumAddress('') # FILL ME IN
 # Initialize contract
 contract = web3.eth.contract(address=address, abi=abi)
 # Read the default greeting
