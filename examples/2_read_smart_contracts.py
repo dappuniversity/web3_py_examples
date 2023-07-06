@@ -13,8 +13,8 @@ address = '0xd26114cd6EE289AccF82350c8d8487fedB8A0C07'
 contract = web3.eth.contract(address=address, abi=abi)
 
 totalSupply = contract.functions.totalSupply().call()
-print(web3.fromWei(totalSupply, 'ether'))
+print(web3.from_wei(totalSupply, 'ether'))
 print(contract.functions.name().call())
 print(contract.functions.symbol().call())
 balance = contract.functions.balanceOf('0xd26114cd6EE289AccF82350c8d8487fedB8A0C07').call()
-print(web3.fromWei(balance, 'ether'))
+print(web3.from_wei(balance, 'ether'))
