@@ -18,7 +18,7 @@ Greeter = web3.eth.contract(abi=abi, bytecode=bytecode)
 tx_hash = Greeter.constructor().transact()
 
 # # Wait for the transaction to be mined, and get the transaction receipt
-tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash)
+tx_receipt = web3.eth.wait_for_transaction_receipt(tx_hash)
 
 # # Create the contract instance with the newly-deployed address
 contract = web3.eth.contract(
@@ -37,7 +37,7 @@ print('Default contract greeting: {}'.format(
 tx_hash = contract.functions.setGreeting('HELLOOOO!!!!').transact()
 
 # # Wait for transaction to be mined...
-web3.eth.waitForTransactionReceipt(tx_hash)
+web3.eth.wait_for_transaction_receipt(tx_hash)
 
 # # Display the new greeting value
 print('Updated contract greeting: {}'.format(

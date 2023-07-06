@@ -12,7 +12,7 @@ web3.eth.defaultAccount = web3.eth.accounts[0]
 # Greeter contract ABI
 abi = json.loads('[{"constant":false,"inputs":[{"name":"_greeting","type":"string"}],"name":"setGreeting","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"greet","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"greeting","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]')
 # Greeter contract address - convert to checksum address
-address = web3.toChecksumAddress('') # FILL ME IN
+address = web3.to_checksum_address('') # FILL ME IN
 # Initialize contract
 contract = web3.eth.contract(address=address, abi=abi)
 # Read the default greeting
@@ -20,7 +20,7 @@ print(contract.functions.greet().call())
 # Set a new greeting
 tx_hash = contract.functions.setGreeting('HEELLLLOOOOOO!!!').transact()
 # Wait for transaction to be mined
-web3.eth.waitForTransactionReceipt(tx_hash)
+web3.eth.wait_for_transaction_receipt(tx_hash)
 # Display the new greeting value
 print('Updated contract greeting: {}'.format(
     contract.functions.greet().call()
